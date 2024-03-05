@@ -87,17 +87,22 @@ function validateForm() {
 
    
 
-    var badWords = ["lodu", "fuck you", "fuck", "chutiyo", "chodu" , "bsdk", "lund", "bkl","mc","chutiye","jhathu" , "mandar chod"];
+    var badWords = ["lodu", "fuck you", "fuck", "chutiyo", "chodu" , "bsdk", "lund", "bkl","mc","chutiye","jhathu" , "chut"];
     for (var i = 0; i < badWords.length; i++) {
       if (message.toLowerCase().indexOf(badWords[i]) !== -1) {
-        document.getElementById("msgvalid").innerHTML = "The message contains prohibited words.chal be chutiye 🖕🏻";
+        document.getElementById("msgvalid").innerHTML = "chal be "+ badWords[i] +" 🖕🏻 Baap Se Pangga Nhi lete";
         isValid = false;
-          setTimeout(function() {
-          document.getElementById("msgvalid").innerHTML = ""; // Remove the message after a delay
+        setTimeout(function() {
+          document.getElementById("msgvalid").innerHTML = "";
         }, 5000);
 
         break;
       }
+    }
+    
+    if (message.toLowerCase() == "fuck you"){
+      document.getElementById("msgvalid").innerHTML = "I'll Fuck you 4 Times 🖕🏻 Looser  😏!!";
+      isValid = false;
     }
 
 
