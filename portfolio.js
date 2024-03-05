@@ -87,12 +87,16 @@ function validateForm() {
 
    
 
-    var badWords = ["lodu", "fuck you", "fuck", "chutiyo", "chodu" , "bsdk", "lund", "bkl","mc","chutiye","jhathu"];
+    var badWords = ["lodu", "fuck you", "fuck", "chutiyo", "chodu" , "bsdk", "lund", "bkl","mc","chutiye","jhathu" , "mandar chod"];
     for (var i = 0; i < badWords.length; i++) {
       if (message.toLowerCase().indexOf(badWords[i]) !== -1) {
         document.getElementById("msgvalid").innerHTML = "The message contains prohibited words.chal be chutiye 🖕🏻";
         isValid = false;
-        break; // Stop checking if any bad word is found
+          setTimeout(function() {
+          document.getElementById("msgvalid").innerHTML = ""; // Remove the message after a delay
+        }, 5000);
+
+        break;
       }
     }
 
