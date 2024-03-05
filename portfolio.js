@@ -87,24 +87,33 @@ function validateForm() {
 
    
 
-    var badWords = ["lodu", "fuck you", "fuck", "chutiyo", "chodu" , "bsdk", "lund", "bkl","mc","chutiye","jhathu" , "chut"];
+    var badWords = ["lodu", "chutiyo", "chodu" , "bsdk", "lund", "bkl","mc","chutiye","jhathu" , "chut"];
     for (var i = 0; i < badWords.length; i++) {
       if (message.toLowerCase().indexOf(badWords[i]) !== -1) {
-        document.getElementById("msgvalid").innerHTML = "chal be "+ badWords[i] +" 🖕🏻 Baap Se Pangga Nhi lete";
+        var typed = new Typed('#msgvalid', {
+          strings: ['chal be '+ badWords[i] +' 🖕🏻 Baap Se Pangga Nhi lete..! Kindy Write Something'],
+          typeSpeed: 50,
+        });
         isValid = false;
         setTimeout(function() {
           document.getElementById("msgvalid").innerHTML = "";
-        }, 5000);
+        }, 7000);
 
         break;
       }
     }
-    
     if (message.toLowerCase() == "fuck you"){
-      document.getElementById("msgvalid").innerHTML = "I'll Fuck you 4 Times 🖕🏻 Looser  😏!!";
+      var typed = new Typed('#badword', {
+        strings: ['Ohh !! Seriously! I will Fuck you 4 Times 🖕🏻 Looser 😏!!'],
+        typeSpeed: 50,
+      });
+      var badwordElement = document.getElementById("badword");
+      badwordElement.style.display = "block";
       isValid = false;
+      setTimeout(function(){
+        document.getElementById("badword").innerHTML = " "; 
+      }, 6000)
     }
-
 
     return isValid;
 
