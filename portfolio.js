@@ -87,34 +87,45 @@ function validateForm() {
 
    
 
-    var badWords = ["lodu", "chutiyo", "chodu" , "bsdk", "lund", "bkl","mc","chutiye","jhathu" , "chut"];
+    var badWords = ["lodu", "chutiyo", "chodu", "bsdk", "lund", "bkl", "mc", "chutiye", "jhathu", "chut"];
+    var rudeWords = ["fuck", "fucking", "fuck you"]; // Words to handle differently
+    
+    var messageLower = message.toLowerCase();
+    var isRude = false;
+    
     for (var i = 0; i < badWords.length; i++) {
-      if (message.toLowerCase().indexOf(badWords[i]) !== -1) {
+      if (messageLower.indexOf(badWords[i]) !== -1) {
         var typed = new Typed('#msgvalid', {
-          strings: ['chal be '+ badWords[i] +' 🖕🏻 Baap Se Pangga Nhi lete..! Kindy Write Something'],
+          strings: ['chal be ' + badWords[i] + ' 🖕🏻 Baap Se Pangga Nhi lete..! Kindy Write Something else..!'],
           typeSpeed: 50,
         });
         isValid = false;
-        setTimeout(function() {
+        setTimeout(function () {
           document.getElementById("msgvalid").innerHTML = "";
-        }, 7000);
-
+        }, 8000);
+        isRude = true;
         break;
       }
     }
-    if (message.toLowerCase() == "fuck you"){
-      var typed = new Typed('#badword', {
-        strings: ['Ohh !! Seriously! I will Fuck you 4 Times 🖕🏻 Looser 😏!!'],
-        typeSpeed: 50,
-      });
-      var badwordElement = document.getElementById("badword");
-      badwordElement.style.display = "block";
-      isValid = false;
-      setTimeout(function(){
-        document.getElementById("badword").innerHTML = " "; 
-      }, 6000)
+    
+    if (!isRude) {
+      for (var j = 0; j < rudeWords.length; j++) {
+        if (messageLower.indexOf(rudeWords[j]) !== -1) {
+          // Handle differently
+          var typed = new Typed('#msgvalid', {
+            strings: ['Ohh! Seriously !! I will Fuck You 4 Times 🖕🏻🖕🏻🖕🏻🖕🏻'],
+            typeSpeed: 50,
+          });
+          isValid = false;
+          setTimeout(function () {
+            document.getElementById("msgvalid").innerHTML = "";
+          }, 7000);
+          isRude = true;
+          break; // No need to continue checking if a rude word is found
+        }
+      }
     }
-
+    
     return isValid;
 
   }
