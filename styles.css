@@ -879,14 +879,6 @@ label{
   color: red;
   font-size: 1rem;
 }
-
-#badword{
-  color: lightgreen;
-  font-size: 1rem;
-  display: none;
-  position: absolute;
-}
-
 .valid{
   color: lightgreen;
   font-size: 1rem;
