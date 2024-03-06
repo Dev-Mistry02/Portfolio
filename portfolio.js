@@ -1,13 +1,3 @@
-window.onload = function() {
-  if (/Mobi/.test(navigator.userAgent)) { // Check if user is on a mobile device
-      var confirmDesktop = confirm("Please set desktop site for better experience.");
-      if (confirmDesktop) {
-          // Redirect to desktop version of the site
-          window.location.href = "https://dev-mistry02.github.io/Dev-s-Portfolio";
-      }
-  }
-}
-
 //step 1: get DOM
 let nextDom = document.getElementById('next');
 let prevDom = document.getElementById('prev');
