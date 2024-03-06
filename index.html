@@ -8,7 +8,19 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="shortcut icon" href="images/dev.jpeg" type="image/x-icon">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+  <script>
+    window.onload = function() {
+        if (/Mobi/.test(navigator.userAgent)) { // Check if user is on a mobile device
+            var prompted = sessionStorage.getItem("prompted");
+            if (!prompted) { // If the user hasn't been prompted yet
+                var confirmDesktop = confirm("Please set desktop site for better experience.");
+                if (confirmDesktop) {
+                    sessionStorage.setItem("prompted", "true"); // Mark the user as prompted
+                }
+            }
+        }
+    }
+    </script> 
   <title>Dev's Portfolio</title>
 </head>
 
