@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="shortcut icon" href="images/dev.jpeg" type="image/x-icon">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -462,10 +463,9 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
-    var preloader = document.getElementById('loader');
-
-    window.addEventListener('load', function () {
-      loader.style.display = "none";
+    
+    document.getElementsByClassName("contact-form-btn")[0].addEventListener("click", () => {
+      confetti();
     })
 
     var typed = new Typed('#element', {
