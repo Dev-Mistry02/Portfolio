@@ -11,12 +11,12 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script>
     window.onload = function() {
-        if (/Mobi/.test(navigator.userAgent)) { // Check if user is on a mobile device
+        if (/Mobi/.test(navigator.userAgent)) {
             var prompted = sessionStorage.getItem("prompted");
-            if (!prompted) { // If the user hasn't been prompted yet
+            if (!prompted) {
                 var confirmDesktop = confirm("Please set desktop site for better experience.");
                 if (confirmDesktop) {
-                    sessionStorage.setItem("prompted", "true"); // Mark the user as prompted
+                    sessionStorage.setItem("prompted", "true"); 
                 }
             }
         }
@@ -38,7 +38,6 @@
       <li class="link"><a href="#Contact">Contact Me</a></li>
       <li class="link"><a href="#Social-Media">Social Media</a></li>
     </ul>
-    <!-- <a href="#"><button class="btn">Register Now</button></a> -->
   </nav>
 
   <header class="section__container header__container" id="Home">
@@ -56,8 +55,6 @@
     <div class="header__content">
       <span class="bg__blur"></span>
       <span class="bg__blur header__blur"></span>
-      <!-- <h4>BEST FITNESS IN THE TOWN</h4> -->
-      <!-- <h1><span>HELLO</span><BR>IT'S ME DEV<BR>I AM </h1> -->
       <p>
         Hello, I'm <span id="element"></span>, a passionate student hailing from Chikhali, Gujarat, currently pursuing a
         Diploma in
@@ -280,7 +277,6 @@
         <form action="https://api.web3forms.com/submit" method="POST" onsubmit="return validateForm()">
           <input type="hidden" name="access_key" value="db7709b2-ae85-4c4c-8999-7fd276cde075">
           <!-- Actual From Start From Here.. -->
-
 
           <span id="nameError" class="error"></span>
           <input type="text" name="name" placeholder="Enter Your Name" class="contact-form-txt" id="name">
