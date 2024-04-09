@@ -248,26 +248,33 @@ nav {
 
 }
 
-.overlap {
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--secondary-color);
-  height: 350px;
-  width: 350px;
-  left: 9.2%;
-  bottom: 12.01%;
-  animation: blink 4s ease-out infinite;
-  animation-delay: calc(1s*var(--i));
-  z-index: -1;
-}
-
-
 .header__image img {
   max-width: 350px;
   height: 350px;
   margin: auto;
   border-radius: 50%;
+  border: 2px solid crimson;
   z-index: 99;
+  box-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 40px var(--secondary-color), 0 0 80px var(--secondary-color);
+  animation: animate 2s linear infinite;
+}
+
+.header__image img:hover {
+  box-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 40px var(--secondary-color), 0 0 100px var(--secondary-color), 0 0 150px var(--secondary-color);
+  cursor: pointer;
+
+}
+
+@keyframes animate {
+  0%{
+    box-shadow: 0 0 15px var(--secondary-color);
+  }
+  50%{
+    box-shadow: 0 0 15px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 30px var(--secondary-color);
+  }
+  100%{
+    box-shadow: 0 0 40px var(--secondary-color), 0 0 80px var(--secondary-color), 0 0 160px var(--secondary-color);
+  }
 }
 
 
