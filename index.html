@@ -29,7 +29,7 @@
   <div id="loader"></div>
   <nav>
     <div class="nav__logo">
-      <a href="#"><img src="images/logo.png" alt="logo" /></a>
+      <a href="#"><img src="images/logo.png" alt="logo" id="logo" /></a>
     </div>
     <ul class="nav__links">
       <li class="link"><a href="#Home">Home</a></li>
@@ -38,6 +38,7 @@
       <li class="link"><a href="#Contact">Contact Me</a></li>
       <li class="link"><a href="#Social-Media">Social Media</a></li>
     </ul>
+    <i id="icon" class="ri-sun-fill"></i>
   </nav>
 
   <header class="section__container header__container" id="Home">
@@ -291,7 +292,7 @@
     <span class="bg__blur"></span>
     <span class="bg__blur footer__blur"></span>
     <div class="footer__col">
-      <div class="footer__logo"><img src="images/logo.png" alt="logo" /></div>
+      <div class="footer__logo"><img src="images/logo.png" alt="logo" id="logo1" /></div>
       <p>
         Take the first step towards a Knowledge with My
         unbeatable Projects. Let's sweat, achieve, and conquer together!<br>
@@ -327,8 +328,22 @@
       strings: ['Dev Mistry', 'Mistry Dev', 'Dev Mistry'],
       typeSpeed: 100,
     });
-
+    
     AOS.init();
+
+    var icon = document.getElementById('icon');
+    icon.onclick = function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.className = "ri-moon-clear-fill";
+        logo.src = "images/1.png";
+        logo1.src = "images/1.png";
+      }else{
+        icon.className = "ri-sun-fill";
+        logo.src = "images/logo.png";
+        logo1.src = "images/logo.png";
+      }
+    }
 
   </script>
 </body>
