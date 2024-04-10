@@ -11,6 +11,16 @@
   --max-width: 1200px;
 }
 
+.dark-theme{
+  --primary-color: #edebeb;
+  --primary-color-light: #d1d5db;
+  --primary-color-extra-light: #8f95a1;
+  --secondary-color: #8b3dff;
+  --secondary-color-dark: rgb(216, 92, 42);
+  --text-light: #1f2125;
+  --white: #111317;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -26,7 +36,6 @@ body {
 
 ::-webkit-scrollbar {
   width: 12px;
-  animation: color 2s linear infinite;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -74,7 +83,7 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--secondary-color-dark);
+  background-color: var(--secondary-color);
 }
 
 img {
@@ -111,12 +120,25 @@ nav {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-light);
   position: sticky;
   top: 0;
   z-index: 1000;
   opacity: 3;
   animation: color 2s linear infinite;
+}
+
+nav i {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+nav i:hover {
+  color: var(--secondary-color);
+  color: yellow;
+  cursor: pointer;
 }
 
 .nav__logo {
@@ -141,6 +163,7 @@ nav {
   position: relative;
   padding: 0.75rem;
   color: var(--white);
+  font-weight: 500;
   z-index: 1001;
 }
 
@@ -253,7 +276,7 @@ nav {
   height: 350px;
   margin: auto;
   border-radius: 50%;
-  border: 2px solid crimson;
+  border: 2px solid var(--secondary-color);
   z-index: 99;
   box-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 40px var(--secondary-color), 0 0 80px var(--secondary-color);
   animation: animate 2s linear infinite;
@@ -333,7 +356,7 @@ nav {
   margin-bottom: 1rem;
   font-size: 1.75rem;
   color: var(--white);
-  background-color: var(--secondary-color-dark);
+  background-color: var(--secondary-color);
   border-radius: 5px;
 }
 
@@ -397,7 +420,7 @@ nav {
   padding: 5px 12px;
   font-size: 1.75rem;
   color: var(--white);
-  background-color: var(--secondary-color-dark);
+  background-color: var(--secondary-color);
   border-radius: 5px;
 }
 
@@ -452,6 +475,7 @@ nav {
   margin-bottom: 2rem;
 }
 
+
 .price__card h4 {
   margin-bottom: 1rem;
   font-size: 1.2rem;
@@ -492,6 +516,7 @@ nav {
   color: var(--white);
   background-color: var(--secondary-color);
 }
+
 
 /* contact form -------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -643,30 +668,6 @@ label{
   background-color: var(--secondary-color);
   animation: color 8s linear infinite;
 
-}
-
-/* Animations ---------------------------------------------------------------------------------------------------- */
-
-@keyframes blink {
-  100% {
-    opacity: 0;
-    transform: scale(1.5);
-  }
-}
-
-@keyframes color {
-  100% {
-    filter: hue-rotate(360deg);
-  }
-
-}
-
-@keyframes showContent {
-  to {
-    transform: translateY(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
 }
 
 @keyframes showImage {
