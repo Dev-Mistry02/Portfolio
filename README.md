@@ -33,7 +33,7 @@ If you're interested in contributing to any of the projects, feel free to submit
 
 ## Contact
 You can reach me via:
-- Email: mistrydev812@gmail.કોમ
+- Email: mistrydev812@gmail.com
 - LinkedIn: https://www.linkedin.com/in/mistry-dev-884a9a284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
 
 ## License
