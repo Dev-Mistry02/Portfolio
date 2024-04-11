@@ -115,45 +115,117 @@
       gained valuable
       experience through coursework, projects, and internships. Here's a glimpse of what I bring to the table:
     </p>
-    <div class="join__image">
-      <img src="images/skill.png" alt="Join" />
-      <div class="join__grid" data-aos="zoom-in-up">
-        <div class="join__card">
-          <span><i class="ri-global-fill"></i></span>
-          <div class="join__card__content">
-            <h4>Languages </h4>
-            <p>Proficient in Python, Java, and JavaScript, with experience in developing applications, algorithms, and
-              data structures. Familiar with C/C++ for system-level programming and PHP for web development.</p>
+    <div id="skill_container">
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number">
+
+            </div>
           </div>
         </div>
-        <div class="join__card">
-          <span><i class="ri-database-2-fill"></i></span>
-          <div class="join__card__content">
-            <h4>Database Management</h4>
-            <p>Knowledgeable in SQL database design and management, including query optimization, normalization, and
-              indexing. Comfortable working with MySQL and PostgreSQL.</p>
-          </div>
-        </div>
-        <div class="join__card">
-          <span><i class="ri-robot-fill"></i></span>
-          <div class="join__card__content">
-            <h4>Machine Learning</h4>
-            <p> Developed machine learning models for classification and regression tasks using libraries such as
-              scikit-learn and TensorFlow. Proficient in preprocessing data, feature engineering, and model evaluation.
-            </p>
-          </div>
-        </div>
-        <div class="join__card">
-          <span><i class="ri-recycle-fill"></i></span>
-          <div class="join__card__content">
-            <h4>SDLC(Software Developement Lifecycle)</h4>
-            <p>Experienced in Agile methodologies and version control systems like Git. Have collaborated with teams
-              using tools like GitHub for project management and code review.
-            </p>
-          </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">HTML</h1>
         </div>
       </div>
-    </div>
+
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number1">
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle1" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">Css</h1>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number2">
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle2" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">JavaScript</h1>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number3">
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle3" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">Python</h1>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number4">
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle4" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">DataBase(MySQL)</h1>
+        </div>
+      </div>
   </section>
 
   <section class="section__container price__container" id="pro-Download">
@@ -339,11 +411,68 @@
         logo.src = "images/1.png";
         logo1.src = "images/1.png";
       }else{
-        icon.className = "ri-sun-fill";
+        icon.className = "ri-sun-foggy-fill";
         logo.src = "images/logo.png";
         logo1.src = "images/logo.png";
       }
     }
+
+    let number = document.getElementById("number");
+    let counter = 0;
+    setInterval(function () {
+      if (counter == 65) {
+        clearInterval();
+      } else {
+        counter += 1;
+        number.innerHTML = counter + "%";
+      }
+
+    }, 30);
+
+    let number1 = document.getElementById("number1");
+    let counter1 = 0;
+    setInterval(function () {
+      if (counter1 == 80) {
+        clearInterval();
+      } else {
+        counter1 += 1;
+        number1.innerHTML = counter1 + "%";
+      }
+
+    }, 25);
+
+    let number2 = document.getElementById("number2");
+    let counter2 = 0;
+    setInterval(function () {
+      if (counter2 == 50) {
+        clearInterval();
+      } else {
+        counter2 += 1;
+        number2.innerHTML = counter2 + "%";
+      }
+    }, 40);
+
+    let number3 = document.getElementById("number3");
+    let counter3 = 0;
+    setInterval(function () {
+      if (counter3 == 90) {
+        clearInterval();
+      } else {
+        counter3 += 1;
+        number3.innerHTML = counter3 + "%";
+      }
+    }, 22);
+
+    let number4 = document.getElementById("number4");
+    let counter4 = 0;
+    setInterval(function () {
+      if (counter4 == 50) {
+        clearInterval();
+      } else {
+        counter4 += 1;
+        number4.innerHTML = counter4 + "%";
+      }
+    }, 40);
 
   </script>
 </body>
