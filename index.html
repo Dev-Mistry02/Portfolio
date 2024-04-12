@@ -474,36 +474,6 @@
       }
     }, 40);
 
-
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const navLinks = document.querySelectorAll('.nav__links li a');
-  
-      // Function to highlight active link
-      function highlightNavLink() {
-          const scrollPosition = window.scrollY;
-  
-          // Loop through each section to check if it's in the viewport
-          document.querySelectorAll('section').forEach(section => {
-              const sectionTop = section.offsetTop - 50;
-              const sectionHeight = section.clientHeight;
-              const sectionId = section.getAttribute('id');
-  
-              if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                  // Remove 'active' class from all links
-                  navLinks.forEach(link => {
-                      link.classList.remove('active');
-                  });
-  
-                  // Add 'active' class to the link corresponding to the current section
-                  document.querySelector(`.nav__links li a[href="#${sectionId}"]`).classList.add('active');
-              }
-          });
-      }
-  
-      // Add scroll event listener to highlight nav links
-      window.addEventListener('scroll', highlightNavLink);
-  });
   </script>
 </body>
 
