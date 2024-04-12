@@ -201,6 +201,12 @@ nav i:hover {
 
 }
 
+a.active {
+  border-bottom: 3px solid var(--secondary-color);
+  border-top: 3px solid var(--secondary-color);
+  transition: 0.5s;
+}
+
 /* Header Container is Start From Here ---------------------------------------------------------------------------------------------------------- */
 
 .header__container {
