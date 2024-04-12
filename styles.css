@@ -822,6 +822,11 @@ label{
 }
 
 @media (width < 1000px) {
+  
+  #skill_container {
+    margin-top: 2rem;
+  }
+  
 
   nav {
     justify-content: space-around;
@@ -1021,6 +1026,10 @@ label{
 @media (width < 900px) {
   .nav__links {
     display: none;
+  }
+  
+  #skill_container {
+    margin-top: 2rem;
   }
 
   .nav__logo {
