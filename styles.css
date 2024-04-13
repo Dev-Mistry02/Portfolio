@@ -814,12 +814,13 @@ label{
 
 /* Media Quarys ---------------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 678px) {
-  .carousel .list .item .content {
-    padding-right: 0;
+@media screen and (max-width: 600px) {
+  .responsiveNav.open{
+    left: 1.5rem;
+    width: unset;
   }
-
 }
+
 
 @media (width < 1000px) {
   
@@ -1024,17 +1025,59 @@ label{
 }
 
 @media (width < 900px) {
+
+  .responsiveNav{
+    display: block;
+    position: absolute;
+    position: fixed;
+    height: 0;
+    right: 1.5rem;
+    top: 70px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .responsiveNav.open{
+    height: 28%;
+  }
+
+  .responsiveNav li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .responsiveNav li a{
+    padding: 5px;
+  }
+
+  nav{
+    justify-content: space-between;
+  }
+
   .nav__links {
     display: none;
   }
-  
-  #skill_container {
-    margin-top: 2rem;
+
+  #close{
+    display: block;
   }
 
   .nav__logo {
     width: 200px;
     margin-bottom: 1rem;
+  }
+
+  #icon{
+    display: none;
   }
 
   .nav__logo img {
@@ -1108,10 +1151,6 @@ label{
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .review__container {
-    height: 100vh;
-  }
-
 
   .footer__container {
     grid-template-columns: 1fr 150px;
@@ -1121,27 +1160,8 @@ label{
     text-align: center;
   }
 
-  .arrows button {
-    height: 30px;
-    width: 30px;
-    position: relative;
-    top: 15px;
-  }
-
-
   .join__card__content p {
     font-size: 70%;
-  }
-
-  .carousel .list .item .title {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-
-  .carousel .list .item .topic {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1.3em;
   }
 
   .price__card__content p {
@@ -1158,14 +1178,6 @@ label{
 
   .des {
     font-size: 0.6rem;
-  }
-
-  .carousel {
-    height: 40vh;
-    margin-top: -50px;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
   }
 
   .contact-map {
