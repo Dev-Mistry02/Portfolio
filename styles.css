@@ -1096,6 +1096,7 @@ label{
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    margin-top: 10px;
   }
   .responsiveNav li a{
     padding: 5px;
