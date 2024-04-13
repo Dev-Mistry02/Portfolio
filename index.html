@@ -10,18 +10,18 @@
   <link rel="shortcut icon" href="images/dev.jpeg" type="image/x-icon">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script>
-    window.onload = function() {
-        if (/Mobi/.test(navigator.userAgent)) {
-            var prompted = sessionStorage.getItem("prompted");
-            if (!prompted) {
-                var confirmDesktop = confirm("Please set desktop site for better experience.");
-                if (confirmDesktop) {
-                    sessionStorage.setItem("prompted", "true"); 
-                }
-            }
+    window.onload = function () {
+      if (/Mobi/.test(navigator.userAgent)) {
+        var prompted = sessionStorage.getItem("prompted");
+        if (!prompted) {
+          var confirmDesktop = confirm("Please set desktop site for better experience.");
+          if (confirmDesktop) {
+            sessionStorage.setItem("prompted", "true");
+          }
         }
+      }
     }
-    </script> 
+  </script>
   <title>Dev's Portfolio</title>
 </head>
 
@@ -38,24 +38,20 @@
       <li class="link"><a href="#Contact">Contact Me</a></li>
       <li class="link"><a href="#Social-Media">Social Media</a></li>
     </ul>
-    <i id="icon" class="ri-sun-fill"></i>   
+    <i id="icon" class="ri-sun-foggy-fill"></i>
     <i class="ri-menu-line" id="close"></i>
-
   </nav>
-
-   <div class="responsiveNav">
+  <div class="responsiveNav">
     <li class="link"><a href="#Home">Home</a></li>
     <li class="link"><a href="#Project">Projects</a></li>
     <li class="link"><a href="#skill">About Me</a></li>
     <li class="link"><a href="#Contact">Contact Me</a></li>
     <li class="link"><a href="#Social-Media">Social Media</a></li>
   </div>
-
   <header class="section__container header__container" id="Home">
     <div class="header__image">
       <img src="images/dev.jpeg" alt="header" />
     </div>
-    
     <div class="header__content">
       <span class="bg__blur"></span>
       <span class="bg__blur header__blur"></span>
@@ -73,7 +69,8 @@
   </header>
 
   <section class="section__container explore__container" id="Project">
-    <div class="explore__header" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
+    <div class="explore__header" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+      data-aos-duration="500">
       <h2 class="section__header" data-aos="zoom-in-down">EXPLORE MY PROJECTS</h2>
     </div>
     <div class="section__subheader" data-aos="zoom-in-up">
@@ -89,7 +86,7 @@
         </p>
         <a href="#pro-Download">Download Now <i class="ri-arrow-right-line"></i></a>
       </div>
-      <div class="explore__card" data-aos="zoom-in-up" >
+      <div class="explore__card" data-aos="zoom-in-up">
         <span><i class="ri-robot-fill"></i></span>
         <h4>JARVIS AI</h4>
         <p>
@@ -123,10 +120,10 @@
     <p class="section__subheader" data-aos="zoom-in-down">
       As a passionate I.T (Information Technology) student, I have developed a diverse set of technical skills and
       gained valuable
-      experience through coursework, projects, and internships. Here's a Round Skill Bars.:
+      experience through coursework, projects, and internships. Here's Skill Pr(%) In That Bars:
     </p>
     <div id="skill_container">
-      <div class="skill" data-aos="zoom-in-up">
+      <div class="skill">
         <div class="outer">
           <div class="inner">
             <div id="number">
@@ -149,7 +146,7 @@
         </div>
       </div>
 
-      <div class="skill" data-aos="zoom-in-up">
+      <div class="skill">
         <div class="outer">
           <div class="inner">
             <div id="number1">
@@ -167,11 +164,11 @@
           <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle1" />
         </svg>
         <div class="skh1">
-          <h1 class="h1">Css</h1>
+          <h1 class="h1">CSS</h1>
         </div>
       </div>
 
-      <div class="skill" data-aos="zoom-in-up">
+      <div class="skill">
         <div class="outer">
           <div class="inner">
             <div id="number2">
@@ -189,11 +186,11 @@
           <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle2" />
         </svg>
         <div class="skh1">
-          <h1 class="h1">JavaScript</h1>
+          <h1 class="h1">JAVASCRIPT</h1>
         </div>
       </div>
 
-      <div class="skill" data-aos="zoom-in-up">
+      <div class="skill">
         <div class="outer">
           <div class="inner">
             <div id="number3">
@@ -211,11 +208,11 @@
           <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle3" />
         </svg>
         <div class="skh1">
-          <h1 class="h1">Python</h1>
+          <h1 class="h1">PYTHON</h1>
         </div>
       </div>
 
-      <div class="skill" data-aos="zoom-in-up">
+      <div class="skill">
         <div class="outer">
           <div class="inner">
             <div id="number4">
@@ -233,14 +230,36 @@
           <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle4" />
         </svg>
         <div class="skh1">
-          <h1 class="h1">DataBase(MySQL)</h1>
+          <h1 class="h1">DATABASE(MySQL)</h1>
         </div>
       </div>
+
   </section>
 
   <section class="section__container price__container" id="pro-Download">
     <h2 class="section__header" data-aos="zoom-in-up">Download Projects From Here</h2>
-    <div class="price__grid" >
+    <div class="price__grid">
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Intermediate Project</h4>
+          <h3>Jarvis Ai</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language: Python
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Easy To Use
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            smart
+          </p>
+        </div>
+        <a href="images/jarvis.zip" download class="btn price__btn">
+          Download
+        </a>
+      </div>
       <div class="price__card" data-aos="zoom-in-up">
         <div class="price__card__content">
           <h4>Basic Project</h4>
@@ -255,27 +274,6 @@
           </p>
         </div>
         <a href="images/WDS.zip" download class="btn price__btn">
-          Download
-        </a>
-      </div>
-      <div class="price__card" data-aos="zoom-in-up">
-        <div class="price__card__content">
-          <h4>Intermediate Project</h4>
-          <h3>Jarvis Ai</h3>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Smart
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Easy To Use
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Using Python
-          </p>
-        </div>
-        <a href="images/jarvis.zip" download class="btn price__btn">
           Download
         </a>
       </div>
@@ -297,11 +295,7 @@
           </p>
           <p>
             <i class="ri-checkbox-circle-line"></i>
-            Using
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Personal Training
+            Language : Python
           </p>
         </div>
         <a href="images/face decation.zip" download class="btn price__btn">
@@ -309,9 +303,9 @@
         </a>
       </div>
       <div class="price__card" data-aos="zoom-in-up">
-        <div class="price__card__content" >
-          <h4>Best Project</h4>
-          <h3>Gym Management</h3>
+        <div class="price__card__content">
+          <h4>Exellence Project</h4>
+          <h3>Fitness Project</h3>
           <p>
             <i class="ri-checkbox-circle-line"></i>
             Best For Collage project
@@ -319,6 +313,36 @@
           <p>
             <i class="ri-checkbox-circle-line"></i>
             Responsive
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : HTML ,Css ,JavaScript
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Functional
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Guarenteed Full Marks
+          </p>
+        </div>
+        <a href="https://github.com/Dev-Mistry02/MoneySavingByDev" download class="btn price__btn">
+          Download
+        </a>
+      </div>
+
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Ordinary Project</h4>
+          <h3>Money Saving</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : HTML ,Css ,JavaScript
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Best Project
           </p>
           <p>
             <i class="ri-checkbox-circle-line"></i>
@@ -333,10 +357,41 @@
             Guarenteed Full Marks
           </p>
         </div>
-        <a href="C:\Users\Mayur lad\face decation.zip" download class="btn price__btn">
+        <a href="https://github.com/Dev-Mistry02/MoneySavingByDev" download class="btn price__btn">
           Download
         </a>
       </div>
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Extra Ordinary Project</h4>
+          <h3>Hand Gesture</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Best For Collage project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : Python
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Unique Project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Mouse Clicks Functions
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Guarenteed Full Marks
+          </p>
+        </div>
+        <a href="images/HandGesture.zip" download class="btn price__btn">
+          Download
+        </a>
+      </div>
+
+
     </div>
   </section>
 
@@ -354,16 +409,18 @@
           <input type="hidden" name="access_key" value="db7709b2-ae85-4c4c-8999-7fd276cde075">
           <!-- Actual From Start From Here.. -->
 
+
           <span id="nameError" class="error"></span>
           <input type="text" name="name" placeholder="Enter Your Name" class="contact-form-txt" id="name">
 
           <span id="emailError" class="error"></span>
           <input type="email" name="email" placeholder="Enter Your Email" class="contact-form-txt" id="email">
-          
+
           <span id="messageError" class="error"></span>
           <span id="msgvalid" class="valid"></span>
-          <textarea name="message" placeholder="Enter Message Here......" class="contact-form-textarea" id="message"></textarea>
-      
+          <textarea name="message" placeholder="Enter Message Here......" class="contact-form-textarea"
+            id="message"></textarea>
+
           <button type="submit" class="contact-form-btn">Submit</button>
         </form>
       </div>
@@ -374,11 +431,11 @@
     <span class="bg__blur"></span>
     <span class="bg__blur footer__blur"></span>
     <div class="footer__col">
-      <div class="footer__logo"><img src="images/logo.png" alt="logo" id="logo1" /></div>
+      <div class="footer__logo"><img src="images/logo.png" alt="logo" id="logo1"></div>
       <p>
         Take the first step towards a Knowledge with My
         unbeatable Projects. Let's sweat, achieve, and conquer together!<br>
-        Don't Forget to Follow My Social Media Handals
+        Don't Forget to Follow My Social Media Handals..!!
       </p>
       <div class="footer__socials">
         <a href="https://www.facebook.com/profile.php?id=100085280537849&mibextid=PtKPJ9"><i
@@ -388,12 +445,15 @@
         <a
           href="https://www.linkedin.com/in/mistry-dev-884a9a284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "><i
             class="ri-linkedin-fill"></i></a>
-        <a href="https://youtube.com/@Devthegamer01?si=lOoFOXRLLw_YGGdh "><i
-            class="ri-youtube-fill"></i></a>
+        <a href="https://www.snapchat.com/add/dev_mistry0211?share_id=Tqa-cwnRTuqAc_H7RQ5fdA&locale=en_IN "><i
+            class="ri-snapchat-fill"></i></a>
         <a href="https://wa.me/qr/CGCZCOW5AOKFK1"><i class="ri-whatsapp-fill"></i></a>
-        <a href="tel: +91 8141368777"><i class="ri-phone-fill"></i></a>
 
+        <a href="tel: +91 8141368777"><i class="ri-phone-fill"></i></a>
       </div>
+
+
+    </div>
     </div>
   </footer>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -401,7 +461,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
-    
+
     document.getElementsByClassName("contact-form-btn")[0].addEventListener("click", () => {
       confetti();
     })
@@ -410,22 +470,24 @@
       strings: ['Dev Mistry', 'Mistry Dev', 'Dev Mistry'],
       typeSpeed: 100,
     });
-    
+
     AOS.init();
 
     var icon = document.getElementById('icon');
-    icon.onclick = function(){
+    icon.onclick = function () {
       document.body.classList.toggle("dark-theme");
-      if(document.body.classList.contains("dark-theme")){
+      if (document.body.classList.contains("dark-theme")) {
         icon.className = "ri-moon-clear-fill";
         logo.src = "images/1.png";
         logo1.src = "images/1.png";
-      }else{
+      } else {
         icon.className = "ri-sun-foggy-fill";
         logo.src = "images/logo.png";
         logo1.src = "images/logo.png";
       }
     }
+
+
     
 
     let number = document.getElementById("number");
