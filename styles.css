@@ -141,6 +141,14 @@ nav i:hover {
   cursor: pointer;
 }
 
+#close{
+  display: none;
+}
+
+.responsiveNav{
+  display: none;
+}
+
 .nav__logo {
   margin-top: 1rem;
   max-width: 150px;
