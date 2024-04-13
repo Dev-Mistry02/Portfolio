@@ -175,6 +175,12 @@ nav i:hover {
   z-index: 1001;
 }
 
+a.active {
+  border-bottom: 3px solid var(--secondary-color);
+  border-top: 3px solid var(--secondary-color);
+  transition: 0.5s;
+}
+
 .link a::after {
   content: "";
   position: absolute;
@@ -209,12 +215,6 @@ nav i:hover {
 
 }
 
-a.active {
-  border-bottom: 3px solid var(--secondary-color);
-  border-top: 3px solid var(--secondary-color);
-  transition: 0.5s;
-}
-
 /* Header Container is Start From Here ---------------------------------------------------------------------------------------------------------- */
 
 .header__container {
@@ -236,7 +236,7 @@ a.active {
   font-weight: 700;
   line-height: 7rem;
   color: var(--white);
-  opacity: 0.07;
+  opacity: 0.09;
   z-index: -1;
   animation: color 2s linear infinite;
 }
@@ -430,7 +430,7 @@ a.active {
   justify-content: center;
   align-items: center;
   display: flex;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+  box-shadow: 6px 6px 10px -1px var(--primary-color),
       -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
@@ -441,11 +441,11 @@ a.active {
   justify-content: center;
   align-items: center;
   display: flex;
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-      inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-      -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-      0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
-      0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 4px 4px 6px -1px var(--primary-color),
+      inset -4px -4px 6px -1px var(--text-light),
+      -0.5px -0.5px 0px var(--white),
+      0.5px 0.5px 0px var(--primary-color),
+      0px 12px 10px -10px var(--primary-color);
 }
 
 #number {
@@ -562,9 +562,9 @@ svg{
   transition: 0.3s;
 }
 
-.price__card:nth-child(4) {
+/* .price__card:nth-child(4) {
   display: none;
-}
+} */
 
 
 .price__card:hover {
@@ -770,11 +770,35 @@ label{
 }
 
 .footer__socials a:hover {
-  box-shadow: 0 0 5px #ff0000, 0 0 25px #f1683a, 0 0 50px #f1683a, 0 0 100px #f1683a;
+  box-shadow: 0 0 5px var(--secondary-color), 0 0 25px var(--secondary-color), 0 0 50px var(--secondary-color), 0 0 100px var(--secondary-color);
   color: var(--white);
   background-color: var(--secondary-color);
   animation: color 8s linear infinite;
 
+}
+
+/* Animations ---------------------------------------------------------------------------------------------------- */
+
+@keyframes blink {
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes color {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes showImage {
@@ -829,13 +853,7 @@ label{
   }
 }
 
-
 @media (width < 1000px) {
-  
-  #skill_container {
-    margin-top: 2rem;
-  }
-  
 
   nav {
     justify-content: space-around;
@@ -950,7 +968,22 @@ label{
   .section__header {
     justify-content: center;
   }
+  .section__header::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    
+  }
 
+  .section__header:hover::after {
+    width: 100%;
+    cursor: pointer;
+
+  }
   .class__image {
     min-height: 500px;
     justify-content: center;
@@ -1032,6 +1065,7 @@ label{
   }
 }
 
+
 @media (width < 900px) {
 
   .responsiveNav{
@@ -1077,6 +1111,7 @@ label{
 
   #close{
     display: block;
+
   }
 
   .nav__logo {
@@ -1159,6 +1194,10 @@ label{
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .review__container {
+    height: 100vh;
+  }
+
 
   .footer__container {
     grid-template-columns: 1fr 150px;
@@ -1168,8 +1207,27 @@ label{
     text-align: center;
   }
 
+  .arrows button {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 15px;
+  }
+
+
   .join__card__content p {
     font-size: 70%;
+  }
+
+  .carousel .list .item .title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .carousel .list .item .topic {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.3em;
   }
 
   .price__card__content p {
@@ -1186,6 +1244,14 @@ label{
 
   .des {
     font-size: 0.6rem;
+  }
+
+  .carousel {
+    height: 40vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
   }
 
   .contact-map {
@@ -1250,4 +1316,5 @@ label{
   .nav__links a {
     font-size: 0.8rem;
   }
+  
 }
