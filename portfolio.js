@@ -1,3 +1,16 @@
+// Nav Bar Responsive
+
+const menu = document.querySelector('#close')
+const NavBar = document.querySelector('.responsiveNav')
+
+menu.onclick = function(){
+  NavBar.classList.toggle('open')
+  const isopen = NavBar.classList.contains('open')
+
+  menu.classList = isopen ? 'ri-close-line' : 'ri-menu-line'
+
+}
+
 // For Validation of Form 
 
 function validateForm() {
