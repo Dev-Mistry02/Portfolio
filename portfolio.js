@@ -11,57 +11,105 @@ menu.onclick = function(){
 
 }
 
+//  for skill Animation============================================================================================================================
 
-
-//step 1: get DOM
-let nextDom = document.getElementById('next');
-let prevDom = document.getElementById('prev');
-
-let carouselDom = document.querySelector('.carousel');
-let SliderDom = carouselDom.querySelector('.carousel .list');
-let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
-let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
-let timeDom = document.querySelector('.carousel .time');
-
-thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-let timeRunning = 3000;
-let timeAutoNext = 7000;
-
-nextDom.onclick = function () {
-  showSlider('next');
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }
 
-prevDom.onclick = function () {
-  showSlider('prev');
-}
-let runTimeOut;
-let runNextAuto = setTimeout(() => {
-  next.click();
-}, timeAutoNext)
-function showSlider(type) {
-  let SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
-  let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
 
-  if (type === 'next') {
-    SliderDom.appendChild(SliderItemsDom[0]);
-    thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-    carouselDom.classList.add('next');
-  } else {
-    SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
-    thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
-    carouselDom.classList.add('prev');
-  }
-  clearTimeout(runTimeOut);
-  runTimeOut = setTimeout(() => {
-    carouselDom.classList.remove('next');
-    carouselDom.classList.remove('prev');
-  }, timeRunning);
+function animateNumber() {
+  const number = document.getElementById("number");
+  let counter = 0;
+  const interval = setInterval(function () {
+    if (counter == 65) {
+      clearInterval(interval);
+    } else {
+      counter += 1;
+      number.innerHTML = counter + "%";
+    }
+  }, 30);
 
-  clearTimeout(runNextAuto);
-  runNextAuto = setTimeout(() => {
-    next.click();
-  }, timeAutoNext)
+  const number1 = document.getElementById("number1");
+  let counter1 = 0;
+  const interval1 = setInterval(function () {
+    if (counter1 == 80) {
+      clearInterval(interval1);
+    } else {
+      counter1 += 1;
+      number1.innerHTML = counter1 + "%";
+    }
+  }, 25);
+
+  const number2 = document.getElementById("number2");
+  let counter2 = 0;
+  const interval2 = setInterval(function () {
+    if (counter2 == 50) {
+      clearInterval(interval2);
+    } else {
+      counter2 += 1;
+      number2.innerHTML = counter2 + "%";
+    }
+  }, 40);
+
+  const number3 = document.getElementById("number3");
+  let counter3 = 0;
+  const interval3 = setInterval(function () {
+    if (counter3 == 90) {
+      clearInterval(interval3);
+    } else {
+      counter3 += 1;
+      number3.innerHTML = counter3 + "%";
+    }
+  }, 22);
+
+  const number4 = document.getElementById("number4");
+  let counter4 = 0;
+  const interval4 = setInterval(function () {
+    if (counter4 == 50) {
+      clearInterval(interval4);
+    } else {
+      counter4 += 1;
+      number4.innerHTML = counter4 + "%";
+    }
+  }, 40);
 }
+
+
+function handleIntersect(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animated');
+      observer.unobserve(entry.target);
+      animateNumber();
+    }
+  });
+}
+
+// Create a new Intersection Observer
+const observer = new IntersectionObserver(handleIntersect, {
+  root: null, // Use the viewport as the root
+  rootMargin: '0px', // No margin
+  threshold: 0.5 // Trigger when 50% of the element is visible
+});
+
+// Observe the skill div
+const skillDiv = document.querySelector('#circle');
+const skillDiv1 = document.querySelector('#circle1');
+const skillDiv2 = document.querySelector('#circle2');
+const skillDiv3 = document.querySelector('#circle3');
+const skillDiv4 = document.querySelector('#circle4');
+observer.observe(skillDiv);
+observer.observe(skillDiv1);
+observer.observe(skillDiv2);
+observer.observe(skillDiv3);
+observer.observe(skillDiv4);
 
 
 // For Validation of Form 
