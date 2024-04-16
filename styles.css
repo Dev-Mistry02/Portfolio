@@ -26,6 +26,8 @@
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
 }
 
 body {
@@ -119,7 +121,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
   background-color: var(--primary-color-light);
   position: sticky;
   top: 0;
@@ -133,6 +134,27 @@ nav i {
   font-size: 1.5rem;
   margin-right: 20px;
   margin-left: 10px;
+}
+
+
+#icon::after{
+  content: "Light-Mode";
+  position: absolute;
+  top: 90%;
+  right: 0%;
+  opacity: 0;
+  color: var(--white);
+  background-color: var(--primary-color-extra-light);
+  border: 1px solid var(--primary-color-light);
+  font-size: 0.8rem;
+  border-radius: 10px;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+  transition-delay: 0.5s;
+}
+
+#icon:hover::after{
+  opacity: 1;
 }
 
 nav i:hover {
@@ -153,9 +175,25 @@ nav i:hover {
   margin-top: 1rem;
   max-width: 150px;
   animation: color 8s linear infinite;
-
 }
-
+.nav__logo::after{
+  content: "Logo";
+  position: absolute;
+  top: 60%;
+  right: 0%;
+  opacity: 0;
+  color: var(--white);
+  background-color: var(--primary-color-extra-light);
+  border: 1px solid var(--primary-color-light);
+  font-size: 0.8rem;
+  border-radius: 10px;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+  transition-delay: 0.5s;
+}
+.nav__logo:hover::after{
+  opacity: 1;
+}
 .nav__links {
   list-style: none;
   display: flex;
@@ -282,7 +320,6 @@ a.active {
   position: relative;
   top: 10px;
   right: 15px;
-
 }
 
 .header__image img {
@@ -296,10 +333,27 @@ a.active {
   animation: animate 2s linear infinite;
 }
 
-.header__image img:hover {
-  box-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 40px var(--secondary-color), 0 0 100px var(--secondary-color), 0 0 150px var(--secondary-color);
-  cursor: pointer;
+img::after {
+  content: "Dev's Image";
+  position: absolute;
+  opacity: 0;
+  color: var(--white);
+  background-color: var(--primary-color-extra-light);
+  border: 1px solid var(--primary-color-light);
+  font-size: 0.8rem;
+  padding: 10px;
+  border-radius: 10px;
+  transition: opacity 0.4s ease-out;
+  transition-delay: 0.5s;
+}
 
+img:hover::after {
+  opacity: 1;
+}
+
+
+.header__image img:hover {
+  cursor: pointer;
 }
 
 @keyframes animate {
@@ -413,6 +467,25 @@ a.active {
   height: 160px;
   position: relative;
   display: grid;
+  cursor: pointer;
+}
+
+.skill::after {
+  content: "Skill in Pr(%)";
+  position: absolute;
+  opacity: 0;
+  color: var(--white);
+  background-color: var(--primary-color-extra-light);
+  border: 1px solid var(--primary-color-light);
+  font-size: 0.8rem;
+  padding: 10px;
+  border-radius: 10px;
+  transition: opacity 0.4s ease-out;
+  transition-delay: 0.5s;
+}
+
+.skill:hover::after {
+  opacity: 1;
 }
 
 .skh1{
@@ -452,6 +525,7 @@ a.active {
   font-weight: 600px;
   color: var(--white);
 }
+
 #number1{
   font-weight: 600px;
   color: var(--white);
@@ -470,14 +544,6 @@ a.active {
   color: var(--white);
 }
 
-#circle{
-  fill: none;
-  stroke: url(#GradientColor);
-  stroke-width: 20px;
-  stroke-dasharray: 472;
-  stroke-dashoffset: 472;
-  animation: anim 2s linear forwards;
-}
 svg{
   position: absolute;
   top: 0;
@@ -486,28 +552,39 @@ svg{
 
 @keyframes anim {
   100%{
-      stroke-dashoffset: 165;
+    stroke-dashoffset: 165;
   }
 }
 
 @keyframes anime {
   100%{
-      stroke-dashoffset: 100;
+    stroke-dashoffset: 100;
   }
 }
 
 @keyframes animet {
   100%{
-      stroke-dashoffset: 236;
+    stroke-dashoffset: 236;
   }
 }
 
 @keyframes animeted {
   100%{
-      stroke-dashoffset: 100;
+    stroke-dashoffset: 100;
   }
 }
 
+#circle{
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+}
+
+#circle.animated{
+  animation: anim 2s linear forwards;
+}
 
 #circle1{
   fill: none;
@@ -515,22 +592,33 @@ svg{
   stroke-width: 20px;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
+}
+
+#circle1.animated{
   animation: anime 2s linear forwards;
 }
+
 #circle2{
   fill: none;
   stroke: url(#GradientColor);
   stroke-width: 20px;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
+}
+
+#circle2.animated{
   animation: animet 2s linear forwards;
 }
+
 #circle3{
   fill: none;
   stroke: url(#GradientColor);
   stroke-width: 20px;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
+}
+
+#circle3.animated{
   animation: animeted 2s linear forwards;
 }
 
@@ -540,9 +628,11 @@ svg{
   stroke-width: 20px;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
-  animation: animet 2s linear forwards;
 }
 
+#circle4.animated{
+  animation: animet 2s linear forwards;
+}
 
 /* Download Project from Here-------------------------------------------------------------------------------------------------------------------- */
 .price__grid {
@@ -1087,7 +1177,7 @@ label{
   }
 
   .responsiveNav.open{
-    height: 28%;
+    height: 35%;
   }
 
   .responsiveNav li{
@@ -1095,8 +1185,8 @@ label{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0.8rem;
     gap: 3rem;
-    margin-top: 10px;
   }
   .responsiveNav li a{
     padding: 5px;
