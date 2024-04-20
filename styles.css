@@ -400,17 +400,20 @@ img:hover::after {
 
 .explore__grid {
   margin-top: 4rem;
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+  display: flex;
+  overflow-x: auto;
 }
 
 .explore__card {
   padding: 1rem;
   background-color: var(--primary-color-light);
   border: 2px solid transparent;
+  width: 250px;
   border-radius: 10px;
   transition: 0.3s;
+  flex: 0 0 auto;
 }
 
 .explore__card:hover {
