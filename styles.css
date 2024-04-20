@@ -1050,7 +1050,8 @@ label{
   }
 
   .explore__card {
-    font-size: 50%;
+    font-size: 0.9rem;
+    height: 300px;
   }
 
   .explore__card h4 {
