@@ -370,6 +370,20 @@ img:hover::after {
 
 
 /* Explor Project Container is Start From Here ----------------------------------------------------------------------------------------------------*/
+
+.arrows{
+  position: absolute;
+  right: 10%;
+}
+.arrows i{
+  font-size: 2rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+  margin: 0.8rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+  padding: 5px;
+}
 .explore__header {
   display: flex;
   align-items: center;
@@ -1107,15 +1121,8 @@ label{
   }
 
   .arrows {
-    position: relative;
-    top: 70%;
-    left: 70%;
-    z-index: 100;
-    width: 300px;
-    max-width: 30%;
-    display: flex;
-    gap: 10px;
-    align-items: center;
+    position: absolute;
+    right: 0;
   }
 
   .footer__container {
@@ -1302,11 +1309,8 @@ label{
     text-align: center;
   }
 
-  .arrows button {
-    height: 30px;
-    width: 30px;
-    position: relative;
-    top: 15px;
+  .arrows{
+    display: none;
   }
 
 
