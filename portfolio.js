@@ -10,6 +10,17 @@ menu.onclick = function(){
   menu.classList = isopen ? 'ri-close-line' : 'ri-menu-line'
 
 }
+// For Arrows
+
+function ScrollContainer(directoin){
+  const container = document.querySelector('.explore__grid');
+  const Amount = 500;
+  if (directoin === 'left'){
+    container.scrollLeft -= Amount;
+  }else if (directoin === 'right'){
+    container.scrollLeft += Amount;
+  }
+}
 
 //  for skill Animation============================================================================================================================
 
