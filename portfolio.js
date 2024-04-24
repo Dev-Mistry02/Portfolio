@@ -39,13 +39,13 @@ function animateNumber() {
   const number = document.getElementById("number");
   let counter = 0;
   const interval = setInterval(function () {
-    if (counter == 65) {
+    if (counter == 95) {
       clearInterval(interval);
     } else {
       counter += 1;
       number.innerHTML = counter + "%";
     }
-  }, 30);
+  }, 21);
 
   const number1 = document.getElementById("number1");
   let counter1 = 0;
