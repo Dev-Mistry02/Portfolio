@@ -214,9 +214,8 @@ nav i:hover {
 }
 
 a.active {
-  border-bottom: 3px solid var(--secondary-color);
-  border-top: 3px solid var(--secondary-color);
-  transition: 0.5s;
+  color: var(--secondary-color);
+  font-weight: 800;
 }
 
 .link a::after {
