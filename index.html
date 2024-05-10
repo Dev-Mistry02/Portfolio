@@ -488,10 +488,24 @@
       confetti();
     })
 
-    var typed = new Typed('#element', {
-      strings: ['Dev Mistry', 'Mistry Dev', 'Dev Mistry'],
-      typeSpeed: 100,
-    });
+    // Initialize the typing animation
+    const typingAnimationElement = document.getElementById('element');
+    const typingTexts = ['Dev Mistry     ', 'Mistry Dev    ', 'Coder Dev   '];
+
+    function playTypingAnimation(text) {
+      for (let i = 0; i < text.length; i++) {
+        setTimeout(() => {
+          typingAnimationElement.textContent += text[i];
+        }, i * 80);
+      }
+
+      setTimeout(() => {
+        typingAnimationElement.textContent = '';
+        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+      }, text.length * 100);
+    }
+
+    playTypingAnimation(typingTexts[0]);
 
     AOS.init();
 
