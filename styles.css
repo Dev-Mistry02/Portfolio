@@ -213,11 +213,6 @@ nav i:hover {
   z-index: 1001;
 }
 
-a.active {
-  color: var(--secondary-color);
-  font-weight: 800;
-}
-
 .link a::after {
   content: "";
   position: absolute;
