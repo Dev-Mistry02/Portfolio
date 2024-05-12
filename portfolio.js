@@ -31,6 +31,7 @@ let calcScrollValue = () => {
     document.documentElement.scrollTop = 0;
   });
   scrollProgress.style.background = `conic-gradient(#D85C2A ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+  scrollProgress.style.animation = "color 2s linear infinite";
 };
 
 window.onscroll = calcScrollValue;
