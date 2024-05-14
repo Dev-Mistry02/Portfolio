@@ -46,4 +46,4 @@ I would like to thank apna collage for their tutorials, documentation, and resou
 Feel free to explore the projects and provide feedback. Thank you for visiting my Acoount.
 
 ## Check Out My Portfolio
-https://dev-mistry02.github.io/Dev-s-Portfolio/
+https://dev-mistry02.github.io/Portfolio/
