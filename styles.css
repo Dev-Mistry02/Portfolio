@@ -33,6 +33,8 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--primary-color);
+  transition: background-color 0.5s, color 0.5s;
+
 }
 
 
