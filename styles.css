@@ -162,27 +162,6 @@ nav i {
   margin-left: 10px;
 }
 
-
-#icon::after{
-  content: "Light-Mode";
-  position: absolute;
-  top: 90%;
-  right: 0%;
-  opacity: 0;
-  color: var(--white);
-  background-color: var(--primary-color-extra-light);
-  border: 1px solid var(--primary-color-light);
-  font-size: 0.8rem;
-  border-radius: 10px;
-  padding: 10px;
-  transition: opacity 0.3s ease;
-  transition-delay: 0.5s;
-}
-
-#icon:hover::after{
-  opacity: 1;
-}
-
 nav i:hover {
   color: var(--secondary-color);
   color: yellow;
