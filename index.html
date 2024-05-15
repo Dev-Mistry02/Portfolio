@@ -516,10 +516,12 @@
       document.body.classList.toggle("dark-theme");
       if (document.body.classList.contains("dark-theme")) {
         icon.className = "ri-moon-clear-fill";
+        icon.title = "Dark-Mode";
         logo.src = "images/1.png";
         logo1.src = "images/1.png";
       } else {
         icon.className = "ri-sun-foggy-fill";
+        icon.title = "Light-Mode";
         logo.src = "images/logo.png";
         logo1.src = "images/logo.png";
       }
