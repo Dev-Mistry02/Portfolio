@@ -34,7 +34,6 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--primary-color);
   transition: background-color 0.5s, color 0.5s;
-
 }
 
 
@@ -120,8 +119,8 @@ a {
   display: none;
   place-items: center;
   border-radius: 50%;
-  z-index: 99999;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
   cursor: pointer;
 }
 
@@ -134,13 +133,15 @@ a {
   display: grid;
   place-items: center;
   font-size: 35px;
-  color: var(--primary-color);
+  color: var(--white);
+  animation: color 2s linear infinite;
 }
 
 /* For Nav Bar----------------------------------------------------------------------------------------------------------------------------------- */
 
 nav {
   max-width: var(--max-width);
+  border-radius: 10px;
   height: 80px;
   width: 100vw;
   margin: auto;
@@ -151,7 +152,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  opacity: 3;
+  opacity: 100;
   animation: color 2s linear infinite;
 }
 
@@ -181,24 +182,7 @@ nav i:hover {
   max-width: 150px;
   animation: color 8s linear infinite;
 }
-.nav__logo::after{
-  content: "Logo";
-  position: absolute;
-  top: 60%;
-  right: 0%;
-  opacity: 0;
-  color: var(--white);
-  background-color: var(--primary-color-extra-light);
-  border: 1px solid var(--primary-color-light);
-  font-size: 0.8rem;
-  border-radius: 10px;
-  padding: 10px;
-  transition: opacity 0.3s ease;
-  transition-delay: 0.5s;
-}
-.nav__logo:hover::after{
-  opacity: 1;
-}
+
 .nav__links {
   list-style: none;
   display: flex;
@@ -345,10 +329,12 @@ nav i:hover {
   border-radius: 50%;
   border: 5px solid transparent;
   z-index: 99;
+  transition: transform 0.4s ease-out;
 }
 
 .header__image img:hover {
   cursor: pointer;
+  transform: scale(1.02);
 }
 
 @keyframes rotate {
@@ -360,6 +346,7 @@ nav i:hover {
     filter: hue-rotate(360deg);
   }
 }
+
 
 @keyframes animate {
   0%{
@@ -379,6 +366,14 @@ nav i:hover {
 .arrows{
   position: absolute;
   right: 10%;
+}
+
+.Name{
+  position: sticky;
+  color: var(--white);
+  left: 3.9rem;
+  font-size: 2rem;
+
 }
 .arrows i{
   font-size: 2rem;
@@ -657,13 +652,39 @@ svg{
 }
 
 /* Download Project from Here-------------------------------------------------------------------------------------------------------------------- */
+
+.catagory{
+  position: absolute;
+  color: var(--white);
+  font-size: 1.9rem;
+  margin-top: 3rem;
+  /* top: 0; */
+}
+
 .price__grid {
-  margin-top: 4rem;
+  margin-top: 7rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
+.price__grid2 {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.price__grid3 {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.price__grid4 {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
 .price__card {
   padding: 3rem 2rem;
   display: flex;
@@ -1035,8 +1056,9 @@ label{
     justify-content: center;
     align-items: center;
   }
+  
 
-   .header__image img {
+  .header__image img {
     position: relative;
     height: 250px;
     width: 250px;
@@ -1047,7 +1069,6 @@ label{
     height: 250px;
     margin: auto;
   }
-
   .overlap {
     position: absolute;
     border-radius: 50%;
@@ -1115,6 +1136,18 @@ label{
   }
 
   .price__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price__grid2{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price__grid3{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price__grid4{
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1307,6 +1340,18 @@ label{
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .price__grid2{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .price__grid3{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .price__grid4{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .review__container {
     height: 100vh;
   }
@@ -1426,5 +1471,4 @@ label{
   .nav__links a {
     font-size: 0.8rem;
   }
-  
 }
