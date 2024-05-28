@@ -513,6 +513,7 @@ nav i:hover {
   color: var(--white);
 }
 
+
 .outer {
   height: 160px;
   width: 160px;
@@ -561,6 +562,16 @@ nav i:hover {
   color: var(--white);
 }
 
+#number5 {
+  font-weight: 600px;
+  color: var(--white);
+}
+
+#number6 {
+  font-weight: 600px;
+  color: var(--white);
+}
+
 svg{
   position: absolute;
   top: 0;
@@ -581,7 +592,7 @@ svg{
 
 @keyframes animet {
   100%{
-    stroke-dashoffset: 236;
+    stroke-dashoffset: 200;
   }
 }
 
@@ -589,6 +600,42 @@ svg{
   100%{
     stroke-dashoffset: 100;
   }
+}
+
+@keyframes animetd {
+  100%{
+    stroke-dashoffset: 200;
+  }
+}
+
+@keyframes Mine {
+  100%{
+    stroke-dashoffset: 250;
+  }
+}
+
+#circle5{
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+}
+
+#circle5.animated{
+  animation: animetd 2s linear forwards;
+}
+
+#circle6{
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+}
+
+#circle6.animated{
+  animation: Mine 2s linear forwards;
 }
 
 #circle{
