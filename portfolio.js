@@ -120,13 +120,35 @@ function animateNumber() {
   const number4 = document.getElementById("number4");
   let counter4 = 0;
   const interval4 = setInterval(function () {
-    if (counter4 == 50) {
+    if (counter4 == 70) {
       clearInterval(interval4);
     } else {
       counter4 += 1;
       number4.innerHTML = counter4 + "%";
     }
-  }, 40);
+  }, 30);
+
+  const number5 = document.getElementById("number5");
+  let counter5 = 0;
+  const interval5 = setInterval(function () {
+    if (counter5 == 65) {
+      clearInterval(interval5);
+    } else {
+      counter5 += 1;
+      number5.innerHTML = counter5 + "%";
+    }
+  }, 33);
+
+  const number6 = document.getElementById("number6");
+  let counter6 = 0;
+  const interval6 = setInterval(function () {
+    if (counter6 == 55) {
+      clearInterval(interval6);
+    } else {
+      counter6 += 1;
+      number6.innerHTML = counter6 + "%";
+    }
+  }, 33);
 }
 
 
@@ -153,12 +175,15 @@ const skillDiv1 = document.querySelector('#circle1');
 const skillDiv2 = document.querySelector('#circle2');
 const skillDiv3 = document.querySelector('#circle3');
 const skillDiv4 = document.querySelector('#circle4');
+const skillDiv5 = document.querySelector('#circle5');
+const skillDiv6 = document.querySelector('#circle6');
 observer.observe(skillDiv);
 observer.observe(skillDiv1);
 observer.observe(skillDiv2);
 observer.observe(skillDiv3);
 observer.observe(skillDiv4);
-
+observer.observe(skillDiv5);
+observer.observe(skillDiv6);
 
 // For Validation of Form 
 
